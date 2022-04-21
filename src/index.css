@@ -1,5 +1,13 @@
-body {
+* {
+  padding: 0;
+  box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  background-image: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center center ;
+  background-repeat: no-repeat;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +15,98 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (min-width: 768px) {
+  body {
+    background-size: 100%;
+  }
+}
+
+/* Navigation Bar */
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(19, 60, 92);
+  /* transform: translateY(-100%); */
+}
+
+.nav-links {
+  font-size: 20px;
+  display: inline-flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.nav-links a {
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background-color:rgb(76, 129, 170);
+}
+
+/* Form */
+h3 {
+  text-align: left;
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 3px 4px 5px #000;
+
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+} 
+
+form {
+  align-items: center;
+  justify-content: center;
+  width:300px;
+  border: 3px solid rgb(27, 82, 124);
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 30px;;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(116, 140, 158);
+}
+
+.btn {
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  padding-left:20px;
+  padding-right:20px;
+  background-color: rgb(19, 60, 92);
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+  color: white;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+
+.password, .userName {
+  margin:10px;
+  width:80%;
+  padding: 15px;
+  border-radius: 10px;
+  border:none;
 }
